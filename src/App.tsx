@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import { EarthquakeList } from "./components/EarthquakeList";
+import type { Earthquake } from "./models/earthquake";
+import { getEarthquakes } from "./services/earthquake-service";
 
 function App() {
+  const [earthquakes, setEarthquakes] = useState<Earthquake[]>([]);
+
+  useEffect(() => {
+    getEarthquakes().then(setEarthquakes);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="earthquake-fe">
+      <EarthquakeList earthquakes={earthquakes} />
     </div>
   );
 }
