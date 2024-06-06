@@ -1,0 +1,32 @@
+.earthquake-list-item {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 1.5em 0;
+  gap: 2em;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .magnitude {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 36px;
+      color: #999;
+    }
+  }
+}
