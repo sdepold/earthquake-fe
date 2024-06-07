@@ -73,4 +73,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Sorting of earthquakes
 - Investigating slowness of the app
 - Be creative and come up with your own ideas!
-- 
