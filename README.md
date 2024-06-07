@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Earthquake FE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application acts a Frontend for our [Earthquake API](https://github.com/sdepold/earthquake-api).
+In its barebone version, it contains a rough overview page which shows Earthquakes of the last 24 hours for a specific continent.
+
+![Goal](./goal.png)
+
+## Exercise
+
+As a fan of traveling all around the globe, you are a bit worried about earthquakes and would like to check your destinations every once in a while to be on the safe side. For that, you would like to have a mobile web app as displayed above so that you can have a fun travel experience.
+
+## Technical notes
+
+- The desktop browser experience can be neglected. Bonus points if it somehow works.
+- You are free to use any additional framework or library you want (the template contains [React](https://react.dev/), [eBay Skin](https://github.com/eBay/ebayui-core-react), [eBay UI Core](https://opensource.ebay.com/skin/) right now)
+- Feel encouraged to cover your code with tests
+- You can get a list of continents from here:
+https://barfooz.net/continents
+- You can get earthquake data for a given timeframe from here:
+https://barfooz.net/earthquakes?starttime=2024-05-01&endtime=2024-05-02&limit=100
+- You can get earthquake details here: https://barfooz.net/earthquakes/ci37650844
 
 ## Available Scripts
 
