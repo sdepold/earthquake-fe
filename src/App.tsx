@@ -1,4 +1,4 @@
-// Add if you're using floating labels
+import "@ebay/skin/global";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { EarthquakeList } from "./components/EarthquakeList";
@@ -13,11 +13,16 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
 
   useEffect(() => {
-    getEarthquakes(selectedRegion).then(setEarthquakes);
+    if (selectedRegion) {
+      getEarthquakes(selectedRegion).then(setEarthquakes);
+    }
   }, [selectedRegion]);
 
   useEffect(() => {
-    getContinents().then(setContinents);
+    getContinents().then((continents) => {
+      setContinents(continents);
+      setSelectedRegion(continents[0].slug);
+    });
   }, []);
 
   return (
