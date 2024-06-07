@@ -8,7 +8,8 @@ export type EarthquakeListProps = {
 export function EarthquakeList({ earthquakes }: EarthquakeListProps) {
   return (
     <div>
-      <h1>Earthquake List</h1>
+      <h1>Earthquake List ({earthquakes.length})</h1>
+
       {earthquakes.map((earthquake: Earthquake) => (
         <EarthquakeListItem key={earthquake.id} earthquake={earthquake} />
       ))}

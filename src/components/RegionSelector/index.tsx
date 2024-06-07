@@ -1,7 +1,9 @@
-import "@ebay/skin/floating-label";
-import "@ebay/skin/select";
-import { EbaySelect, EbaySelectOption } from "@ebay/ui-core-react/ebay-select";
+import {
+  EbayListboxButton,
+  EbayListboxButtonOption,
+} from "@ebay/ui-core-react/ebay-listbox-button";
 import { Continent } from "../../models/continent";
+import "./style.css";
 
 export type RegionSelectorProps = {
   regions: Continent[];
@@ -14,17 +16,36 @@ export function RegionSelector({
   onChange,
   value,
 }: RegionSelectorProps) {
+  if (regions.length === 0) {
+    return null;
+  }
+
   return (
-    <EbaySelect
-      name="formSelect"
-      onChange={(evt, data: any) => onChange(data.selected[0])}
-      value={value || undefined}
-    >
-      {regions.map((region) => (
-        <EbaySelectOption key={region.slug} value={region.slug}>
-          {region.name}
-        </EbaySelectOption>
-      ))}
-    </EbaySelect>
+    <div className="region-selector">
+      <EbayListboxButton
+        floatingLabel="Select a region"
+        onChange={(evt, data: any) => onChange(data.selected[0])}
+        value={value || undefined}
+        style={{ width: "100%" }}
+      >
+        {regions.map((region) => (
+          <EbayListboxButtonOption key={region.slug} value={region.slug}>
+            {region.name}
+          </EbayListboxButtonOption>
+        ))}
+      </EbayListboxButton>
+    </div>
+
+    // <EbaySelect
+    //   name="formSelect"
+    //   onChange={(evt, data: any) => onChange(data.selected[0])}
+    //   value={value || undefined}
+    // >
+    //   {regions.map((region) => (
+    //     <EbaySelectOption key={region.slug} value={region.slug}>
+    //       {region.name}
+    //     </EbaySelectOption>
+    //   ))}
+    // </EbaySelect>
   );
 }
