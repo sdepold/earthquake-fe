@@ -2,12 +2,15 @@ import "@ebay/skin/core";
 import "@ebay/skin/marketsans";
 import "@ebay/skin/tokens";
 import { useEffect, useState } from "react";
-import "./App.css";
-import { EarthquakeList } from "./components/EarthquakeList";
-import { RegionSelector } from "./components/RegionSelector";
-import type { Continent } from "./models/continent";
-import type { Earthquake } from "./models/earthquake";
-import { getContinents, getEarthquakes } from "./services/earthquake-service";
+import type { Continent } from "../../models/continent";
+import type { Earthquake } from "../../models/earthquake";
+import {
+  getContinents,
+  getEarthquakes,
+} from "../../services/earthquake-service";
+import { EarthquakeList } from "../EarthquakeList";
+import { RegionSelector } from "../RegionSelector";
+import "./style.css";
 
 function App() {
   const [earthquakes, setEarthquakes] = useState<Earthquake[]>([]);
