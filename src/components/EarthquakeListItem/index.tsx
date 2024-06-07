@@ -11,8 +11,8 @@ export function EarthquakeListItem({ earthquake }: EarthquakeListItemProps) {
     <div className="earthquake-list-item">
       <Map earthquake={earthquake} />
       <div>
-        <h2>{earthquake.title}</h2>
-        <p>{earthquake.place}</p>
+        <h2>{earthquake.place}</h2>
+        <p>{earthquake.date.toLocaleDateString("en-US")}</p>
       </div>
       <div className="magnitude">
         <span>{Math.round(earthquake.magnitude)}</span>
