@@ -27,7 +27,11 @@ function App() {
 
   return (
     <div className="earthquake-fe">
-      <RegionSelector regions={continents} onChange={setSelectedRegion} />
+      <RegionSelector
+        regions={continents}
+        onChange={setSelectedRegion}
+        value={selectedRegion}
+      />
       <EarthquakeList earthquakes={earthquakes} />
     </div>
   );
