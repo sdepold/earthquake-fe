@@ -20,6 +20,8 @@ https://barfooz.net/continents
 https://barfooz.net/earthquakes?starttime=2024-05-01&endtime=2024-05-02&limit=100
 - You can get earthquake details here: https://barfooz.net/earthquakes/ci37650844
 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -62,3 +64,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Potential tasks
+
+- Implementation of earthquake details screen
+- Highlighting of severe earthquakes (magnitude >= 8.0)
+- Increasing test coverage
+- Sorting of earthquakes
+- Investigating slowness of the app
+- Be creative and come up with your own ideas!
+- 
