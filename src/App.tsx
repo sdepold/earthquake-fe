@@ -1,4 +1,6 @@
-import "@ebay/skin/global";
+import "@ebay/skin/core";
+import "@ebay/skin/marketsans";
+import "@ebay/skin/tokens";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { EarthquakeList } from "./components/EarthquakeList";
