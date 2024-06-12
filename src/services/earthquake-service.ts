@@ -1,6 +1,6 @@
 import { fromDownstream } from "../models/earthquake";
 
-const BASE_URL = "https://earthquake-api-ivory.vercel.app";
+const BASE_URL = "https://barfooz.net";
 
 export async function getEarthquakes(continent: string | null) {
   const params = continent ? `?continent=${continent}` : "";
