@@ -2,6 +2,7 @@ import "@ebay/skin";
 import "@ebay/skin/core";
 import "@ebay/skin/marketsans";
 import "@ebay/skin/tokens";
+import { EbaySvg } from "@ebay/ui-core-react/ebay-svg";
 
 import { useEffect, useState } from "react";
 import type { Continent } from "../../models/continent";
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="earthquake-fe">
+      <EbaySvg />
       <RegionSelector
         regions={continents}
         onChange={setSelectedRegion}
